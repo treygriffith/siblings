@@ -1,0 +1,13 @@
+{
+  "name": "siblings",
+  "description": "Get the siblings of an element",
+  "version": "0.0.1",
+  "dependencies": {
+    "component/matches-selector": "*",
+    "discore/children": "*"
+  },
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
