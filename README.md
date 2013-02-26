@@ -13,7 +13,7 @@
 returns `siblings[]` - Array of DOM elements that are the siblings of `element`.
   Note, does not return the element.
 
-## `getSiblings.next(element[, selector[, limit]])
+## `getSiblings.next(element[, selector[, limit]])`
 
     var nextSiblings = getSiblings.next(element, selector, limit)
     var nextSiblings = getSiblings.next(element, limit)
