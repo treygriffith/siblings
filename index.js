@@ -1,14 +1,17 @@
 var matches = require('matches-selector')
 var getChildren = require('children')
 
-exports = module.exports = function (el, selector) {
-  return getChildren(el.parentNode, selector).filter(function (sib) {
+module.exports = Siblings
+
+function Siblings(el, selector) {
+  return getChildren(el.parentNode, selector)
+  .filter(function (sib) {
     return sib !== el
   })
 }
 
-exports.next = traverse('next')
-exports.prev = traverse('prev')
+Siblings.next = traverse('next')
+Siblings.prev = traverse('prev')
 
 function traverse(dir) {
   var prop = dir + 'ElementSibling'
@@ -23,11 +26,14 @@ function traverse(dir) {
     var sibling = el
 
     while (true) {
-      if (!(sibling = sibling[prop])) break;
-      if (selector && !matches(sibling, selector)) continue;
+      if (!(sibling = sibling[prop]))
+        break
 
-      var length = siblings.push(sibling)
-      if (limit && length >= limit) break;
+      if (selector && !matches(sibling, selector))
+        continue
+
+      if (limit && siblings.push(sibling) >= limit)
+        break
     }
 
     return limit === 1 ? siblings.shift() : siblings
