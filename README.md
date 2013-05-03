@@ -35,7 +35,7 @@ returns:
 * `sibling` - DOM element or `null` if `limit === 1`
 * `siblings[]` - array of DOM elements if `limit !== 1`
 
-## getSiblings.prev
+## getSiblings.prev(element[, selector[, limit]])
 
 Same as `.next()` except in the opposite direction.
 
