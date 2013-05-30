@@ -11,7 +11,7 @@ function Siblings(el, selector) {
 }
 
 Siblings.next = traverse('next')
-Siblings.prev = traverse('prev')
+Siblings.prev = traverse('previous')
 
 function traverse(dir) {
   var prop = dir + 'ElementSibling'
