@@ -24,6 +24,7 @@ function traverse(dir) {
 
     var siblings = []
     var sibling = el
+    var length = 0
 
     while (true) {
       if (!(sibling = sibling[prop]))
@@ -32,9 +33,9 @@ function traverse(dir) {
       if (selector && !matches(sibling, selector))
         continue
 
-      siblings.push(sibling)
+      length = siblings.push(sibling)
       
-      if (limit && siblings.length >= limit)
+      if (limit && length >= limit)
         break
     }
 
