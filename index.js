@@ -32,7 +32,9 @@ function traverse(dir) {
       if (selector && !matches(sibling, selector))
         continue
 
-      if (limit && siblings.push(sibling) >= limit)
+      siblings.push(sibling)
+      
+      if (limit && siblings.length >= limit)
         break
     }
 
