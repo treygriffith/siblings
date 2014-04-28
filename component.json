@@ -1,6 +1,6 @@
 {
   "name": "siblings",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "get the siblings of an element",
   "repo": "ramitos/siblings",
   "keywords": ["dom", "siblings"],
